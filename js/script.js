@@ -17,6 +17,8 @@ FSJS project 1 - A Random Quote Generator
 ***/
 
 var message = '';
+var loadQuote;
+var randomQuote;
 
 let quotes = [
   {quote: “Defining myself is one of the most difficult challenges I face.”, 
@@ -45,10 +47,6 @@ let quotes = [
      `quotes` array.
 ***/
 
-// function getRandomQuote(quotes){
-//   var random = Math.floor(Math.random());
-
-// }
 
 function print(quote) {
 	var outputDiv = document.getElementById('quote-box');
@@ -61,6 +59,7 @@ function getRandomQuote () {
    return Math.floor(myRandomNumber)
 }
 
+getRandomQuote(loadQuote);
 
 /***
   Create the `printQuote` function to: 
@@ -73,7 +72,7 @@ function getRandomQuote () {
 ***/
 
 function printQuote(message) {
-  var result = getRandomQuote(quotes);
+  var printQuote = getRandomQuote(quotes[randomQuote]);
   var HTML="";
   HTML += "<p class='quote'>" + result.quote + "</p>" +
     "<p class='source'>" + result.source + "</p>";
