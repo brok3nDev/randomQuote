@@ -17,12 +17,21 @@ FSJS project 1 - A Random Quote Generator
 ***/
 
 let quotes = [
-  {quote: “Defining myself is one of the most difficult challenges I face.”, source: "Carol Moseley-Braun" },
-  {quote: “Hate is too great a burden to bear. It injures the hater more than it injures the hated.”, source: "Coretta Scott King" },
-  {quote: “In recognizing the humanity of our fellow beings we pay ourselves the highest tribute.”, source: "Thurgood Marshall" },
-  {quote: “Whatever we believe about ourselves and our ability comes true for us.”, source: "Susan L. Taylor" },
-  {quote: “Imagination is more important than knowledge.”, source: "Albert Einstein" },
-
+  {quote: “Defining myself is one of the most difficult challenges I face.”, 
+   source: "Carol Moseley-Braun",
+  },
+  {quote: “Hate is too great a burden to bear. It injures the hater more than it injures the hated.”, 
+   source: "Coretta Scott King",
+  },
+  {quote: “In recognizing the humanity of our fellow beings we pay ourselves the highest tribute.”, 
+   source: "Thurgood Marshall" 
+  },
+  {quote: “Whatever we believe about ourselves and our ability comes true for us.”, 
+   source: "Susan L. Taylor" 
+  },
+  {quote: “Imagination is more important than knowledge.”, 
+   source: "Albert Einstein" 
+  }
 ];
 
 
@@ -39,12 +48,10 @@ let quotes = [
 
 // }
 
-function getRandomQuote(min_value , max_value) {
-    
-  let random_number = Math.random() * (max-min) + min;
+function getRandomQuote (lower, upper) {
+    let random_number = Math.random() * (max-min) + min;
    return Math.floor(random_number);
-}
-function getArray(array) {
+} function getArray(array) {
    return array[ getRandomQuote(0,array.length)];
 }
 
