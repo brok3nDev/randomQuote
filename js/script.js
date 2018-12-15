@@ -16,6 +16,8 @@ FSJS project 1 - A Random Quote Generator
       quote object.
 ***/
 
+var message = '';
+
 let quotes = [
   {quote: “Defining myself is one of the most difficult challenges I face.”, 
    source: "Carol Moseley-Braun",
@@ -48,11 +50,15 @@ let quotes = [
 
 // }
 
-function getRandomQuote (lower, upper) {
-    let random_number = Math.random() * (max-min) + min;
-   return Math.floor(random_number);
-} function getArray(array) {
-   return array[ getRandomQuote(0,array.length)];
+function print(quote) {
+	var outputDiv = document.getElementById('quote-box');
+	outputDiv.innerHTML = quote;
+}
+
+function getRandomQuote () {
+   var randomQuote = Math.floor(Math.random() * quotes.length);
+   let myRandomNumber = Math.random();
+   return Math.floor(myRandomNumber)
 }
 
 
@@ -67,11 +73,12 @@ function getRandomQuote (lower, upper) {
 ***/
 
 function printQuote(message) {
-  var result = getRandomQuote();
-  var message = "<p class='quote'>" + result.quote + "</p>" +
+  var result = getRandomQuote(quotes);
+  var HTML="";
+  HTML += "<p class='quote'>" + result.quote + "</p>" +
     "<p class='source'>" + result.source + "</p>";
-  document.getElementById('quote-box').innerHTML = message;
-
+  document.getElementById('quote-box').innerHTML = HTML;
+  return HTML;
 }
 
 
