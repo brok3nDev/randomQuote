@@ -44,7 +44,6 @@ function printQuote() {
   stringOfQuoteProperties += '<p class="source">' + getQuote.source;
 
 
-stringOfQuoteProperties += '<span class="tag">' + getQuote.tag + '</span> </p>';
 
 document.getElementById('quote-box').innerHTML = stringOfQuoteProperties;
 };
