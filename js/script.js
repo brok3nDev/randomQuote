@@ -33,13 +33,13 @@ function getRandomQuote () {
    return quotes[randomQuote];
 };
 
-getRandomQuote(loadQuote);
+getRandomQuote();
 
 
 //print function 
 
 function printQuote() {
-  var getQuote = getRandomQuote(quotes);
+  var getQuote = getRandomQuote();
   var stringOfQuoteProperties = '<p class="quote">' + getQuote.quote + '</p>';
   stringOfQuoteProperties += '<p class="source">' + getQuote.source;
 
