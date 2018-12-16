@@ -28,7 +28,7 @@ let quotes = [
 
 //Created random generator 
 
-function getRandomQuote (array) {
+function getRandomQuote () {
    var randomQuote = Math.floor(Math.random() * quotes.length);
    return quotes[randomQuote];
 };
@@ -53,7 +53,7 @@ printQuote();
 
 
 
-function getRandomColor(array) {
+function getRandomColor() {
   var randomColor = Math.floor(Math.random() * bgColors.length);
   return bgColors[randomColor];
 };
